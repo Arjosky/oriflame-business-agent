@@ -1,4 +1,40 @@
 {
+  "name": "oriflame-business-agent",
+  "version": "1.0.0",
+  "description": "Oriflame campaign dashboard, WhatsApp auto-reply bot, and SQLite member database tools.",
+  "private": true,
+  "type": "commonjs",
+  "main": "server.js",
+  "author": "Arjo Roy",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Arjosky/oriflame-business-agent.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Arjosky/oriflame-business-agent/issues"
+  },
+  "homepage": "https://github.com/Arjosky/oriflame-business-agent#readme",
+  "keywords": [
+    "oriflame",
+    "whatsapp",
+    "automation",
+    "campaign",
+    "express",
+    "sqlite"
+  ],
+  "engines": {
+    "node": ">=20.17.0",
+    "npm": ">=10"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "start:dashboard": "node server.js",
+    "start:bot": "node bot.js",
+    "db:setup": "node db_setup.js",
+    "check": "node --check app.js && node --check campaignService.js && node --check server.js && node --check bot.js && node --check db_setup.js",
+    "test": "node --test",
+    "test:watch": "node --test --watch"
+  },
   "dependencies": {
     "express": "^5.3.0",
     "qrcode-terminal": "^0.12.0",
